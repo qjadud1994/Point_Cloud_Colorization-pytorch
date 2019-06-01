@@ -21,8 +21,8 @@ def adjust_learning_rate(cur_lr, optimizer, gamma, step):
 parser = argparse.ArgumentParser()
 parser.add_argument('--root', default='/root/DB/')
 parser.add_argument('--batch_size', type=int, default=32, help='train batch size')
-parser.add_argument('--num_pts', type=int, default=2048, help='number of points 2048/4096')
-parser.add_argument('--num_workers', default=4, type=int, help='Number of workers used in dataloading')
+parser.add_argument('--num_pts', type=int, default=4096, help='number of points 2048/4096')
+parser.add_argument('--num_workers', default=0, type=int, help='Number of workers used in dataloading')
 parser.add_argument('--dataset', type=str, help='select training dataset')
 parser.add_argument('--train_epoch', type=int, default=1000, help='number of train epochs')
 parser.add_argument('--lrD', type=float, default=0.0001, help='learning rate, default=0.0001')
@@ -68,7 +68,7 @@ transform = transforms.Compose([
 trainset = ListDataset(root=opt.root, dataset='densepoint', mode="train", 
                        num_pts=opt.num_pts, transform=transform, 
                        augmentation=opt.augmentation)
-train_loader = torch.utils.data.DataLoader(trainset, batch_size=opt.batch_size, shuffle=True, num_workers=0)
+train_loader = torch.utils.data.DataLoader(trainset, batch_size=opt.batch_size, shuffle=True, num_workers=opt.num_workers)
 
 
 """ Networks : Generator & Discriminator """
