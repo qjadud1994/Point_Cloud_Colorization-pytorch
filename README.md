@@ -16,9 +16,9 @@ Inference.ipynb
 ~~~
 
 ### Results
-(get from [Point Cloud Colorization Based on Densely Annotated 3D Shape Dataset](https://arxiv.org/ftp/arxiv/papers/1810/1810.05396.pdf) paper
+(get from [Point Cloud Colorization Based on Densely Annotated 3D Shape Dataset](https://arxiv.org/ftp/arxiv/papers/1810/1810.05396.pdf) paper)
 
-![screensh](https://github.com/qjadud1994/OCR_Detector/blob/master/photos/bad_ic15.PNG)
+![screensh](https://github.com/qjadud1994/Point_Cloud_Colorization-pytorch/blob/master/results.PNG)
 
 ### Environment
 
