@@ -20,6 +20,32 @@ Inference.ipynb
 
 ![screensh](https://github.com/qjadud1994/Point_Cloud_Colorization-pytorch/blob/master/results.PNG)
 
+### Dataset - "DensePoint"
+
+~~~
+apt-get install zip
+cd ~
+mkdir DB
+cd DB
+mkdir densepoint
+cd densepoint
+
+export fileid=1bqaRfqcuWbvVs1YAg9vFe0zAX3jwH7zo
+export filename=densepoint.zip
+
+wget --save-cookies cookies.txt 'https://docs.google.com/uc?export=download&id='$fileid -O- \
+     | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1/p' > confirm.txt
+
+wget --load-cookies cookies.txt -O $filename \
+     'https://docs.google.com/uc?export=download&id='$fileid'&confirm='$(<confirm.txt)
+
+rm -f confirm.txt cookies.txt
+
+unzip densepoint.zip
+
+rm densepoint.zip
+~~~
+
 ### Environment
 
 - os : Ubuntu 16.04.4 LTS
