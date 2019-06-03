@@ -65,9 +65,6 @@ class ListDataset(data.Dataset):
         self.color = self.color / 127.5 # 0~2
         self.color = self.color - 1.  # -1~1
 
-        self.data = np.delete(self.data[0:300], trash_data_list(), 0)
-        self.color = np.delete(self.color[0:300], trash_data_list(), 0)
-        
         self.num_samples = self.data.shape[0]
 
 def test1():
